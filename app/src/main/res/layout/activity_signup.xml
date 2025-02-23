@@ -1,53 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp">
 
-    <EditText
-        android:id="@+id/etUsername"
+    <!-- Username Field with TextInputLayout -->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username" />
+        app:endIconMode="clear_text"> <!-- Clear text icon for username -->
 
-    <EditText
-        android:id="@+id/etEmail"
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Email Field with TextInputLayout -->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email" />
+        app:endIconMode="clear_text"> <!-- Clear text icon for email -->
 
-    <EditText
-        android:id="@+id/etContact"
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" /> <!-- Use textEmailAddress for email input -->
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Contact Number Field with TextInputLayout -->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Contact Number"
-        android:inputType="phone" />
+        app:endIconMode="clear_text"> <!-- Clear text icon for contact number -->
 
-    <EditText
-        android:id="@+id/etPassword"
+        <EditText
+            android:id="@+id/etContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact Number"
+            android:inputType="phone" /> <!-- Use phone input type for contact number -->
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password Field with TextInputLayout -->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        app:endIconMode="password_toggle"> <!-- Password toggle icon -->
 
-    <EditText
-        android:id="@+id/etConfirmPassword"
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword" /> <!-- Use textPassword for password input -->
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Confirm Password Field with TextInputLayout -->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Confirm Password"
-        android:inputType="textPassword" />
+        app:endIconMode="password_toggle"> <!-- Password toggle icon -->
 
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:inputType="textPassword" /> <!-- Use textPassword for confirm password input -->
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Signup Button -->
     <Button
         android:id="@+id/btnSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Signup" />
 
+    <!-- Login Text -->
     <TextView
         android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Already have an account? Login"
         android:textColor="@android:color/holo_blue_dark" />
+
 </LinearLayout>
