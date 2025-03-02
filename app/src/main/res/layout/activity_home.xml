@@ -113,7 +113,8 @@
                     android:orientation="vertical"
                     android:background="@color/light_gray"
                     android:padding="8dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp"> <!-- Added margin for gap -->
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -144,6 +145,14 @@
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:layout_gravity="center_horizontal"/>
+
+                    <!-- Rating -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⭐ 4.5"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
 
                 <!-- Jeans -->
@@ -152,9 +161,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:background="@drawable/background"
+                    android:background="@color/light_gray"
                     android:padding="8dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"> <!-- Added margin for gap -->
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -184,6 +194,14 @@
                         android:text="Jeans - $35"
                         android:textSize="14sp"
                         android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <!-- Rating -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⭐ 4.7"
+                        android:textSize="12sp"
                         android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
             </LinearLayout>
@@ -195,7 +213,7 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="16dp">
 
-                <!-- Shirt -->
+                <!-- Shoes -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -203,7 +221,8 @@
                     android:orientation="vertical"
                     android:background="@color/light_gray"
                     android:padding="8dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp"> <!-- Added margin for gap -->
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -214,8 +233,8 @@
                             android:layout_height="100dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginBottom="8dp"
-                            android:contentDescription="Shirt Icon"
-                            android:src="@drawable/shirt" />
+                            android:contentDescription="Shoes Icon"
+                            android:src="@drawable/shoes" />
 
                         <!-- Favorite Icon -->
                         <ImageView
@@ -230,21 +249,30 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Shirt - $20"
+                        android:text="Shoes - $50"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:layout_gravity="center_horizontal"/>
+
+                    <!-- Rating -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⭐ 4.8"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
 
-                <!-- Jeans -->
+                <!-- Coat -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:background="@drawable/background"
+                    android:background="@color/light_gray"
                     android:padding="8dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"> <!-- Added margin for gap -->
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -253,8 +281,8 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/jeans"
-                            android:contentDescription="Jeans Icon"
+                            android:src="@drawable/coat"
+                            android:contentDescription="Coat Icon"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginBottom="8dp"/>
 
@@ -271,9 +299,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Jeans - $35"
+                        android:text="Coat - $70"
                         android:textSize="14sp"
                         android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <!-- Rating -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⭐ 4.6"
+                        android:textSize="12sp"
                         android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
             </LinearLayout>
