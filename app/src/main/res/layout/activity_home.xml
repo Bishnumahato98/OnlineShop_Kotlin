@@ -15,14 +15,14 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_search"
+            android:src="@drawable/search"
             android:contentDescription="Search"
             android:layout_marginEnd="16dp"/>
 
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_notification"
+            android:src="@drawable/notification"
             android:contentDescription="Notification"/>
     </LinearLayout>
 
@@ -111,7 +111,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:background="@drawable/background"
+                    android:background="@color/light_gray"
                     android:padding="8dp"
                     android:gravity="center">
 
@@ -131,7 +131,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/ic_favorite"
+                            android:src="@drawable/favourite"
                             android:contentDescription="Favorite"
                             android:layout_alignParentEnd="true"
                             android:layout_margin="8dp"/>
@@ -152,7 +152,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:background="@drawable/div_background"
+                    android:background="@drawable/background"
                     android:padding="8dp"
                     android:gravity="center">
 
@@ -172,7 +172,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/ic_favorite"
+                            android:src="@drawable/favourite"
                             android:contentDescription="Favorite"
                             android:layout_alignParentEnd="true"
                             android:layout_margin="8dp"/>
@@ -192,15 +192,16 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
 
-                <!-- Shoes -->
+                <!-- Shirt -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:background="@drawable/div_background"
+                    android:background="@color/light_gray"
                     android:padding="8dp"
                     android:gravity="center">
 
@@ -211,16 +212,16 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/shoes"
-                            android:contentDescription="Shoes Icon"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginBottom="8dp"/>
+                            android:layout_marginBottom="8dp"
+                            android:contentDescription="Shirt Icon"
+                            android:src="@drawable/shirt" />
 
                         <!-- Favorite Icon -->
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/ic_favorite"
+                            android:src="@drawable/favourite"
                             android:contentDescription="Favorite"
                             android:layout_alignParentEnd="true"
                             android:layout_margin="8dp"/>
@@ -229,7 +230,48 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Shoes - $50"
+                        android:text="Shirt - $20"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+
+                <!-- Jeans -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/background"
+                    android:padding="8dp"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/jeans"
+                            android:contentDescription="Jeans Icon"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"/>
+
+                        <!-- Favorite Icon -->
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/favourite"
+                            android:contentDescription="Favorite"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="8dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jeans - $35"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:layout_gravity="center_horizontal"/>
