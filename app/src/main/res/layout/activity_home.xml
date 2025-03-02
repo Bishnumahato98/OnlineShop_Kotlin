@@ -2,10 +2,31 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:layout_height="match_parent">
 
-    <!-- Scrollable Content -->
+    <!-- Top Bar with Search and Notification -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="end">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            android:contentDescription="Search"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_notification"
+            android:contentDescription="Notification"/>
+    </LinearLayout>
+
+    <!-- Scrollable Home Page Content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,15 +39,26 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Space before New Collection Section -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="16dp"/>
+            <!-- Welcome Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome Back"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bishnu"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp"/>
 
             <!-- New Collection Section -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="180dp"
                 android:background="@drawable/man"
                 android:gravity="center"
                 android:padding="16dp"
@@ -56,45 +88,6 @@
                     android:textColor="@android:color/white"/>
             </LinearLayout>
 
-            <!-- Space before Welcome Section -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="16dp"/>
-
-            <!-- Welcome Section -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:padding="16dp"
-                android:background="@android:color/white">
-
-                <!-- Welcome Text -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Welcome, Bishnu"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:layout_weight="1"/>
-
-                <!-- Search Icon -->
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_search"
-                    android:contentDescription="Search"
-                    android:layout_marginEnd="16dp"/>
-
-                <!-- Notification Icon -->
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_notification"
-                    android:contentDescription="Notifications"/>
-            </LinearLayout>
-
             <!-- Recommendation Section -->
             <TextView
                 android:layout_width="wrap_content"
@@ -105,107 +98,143 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"/>
 
-            <!-- Product Grid Layout (2 Columns Per Row) -->
-            <GridLayout
+            <!-- First Row -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:columnCount="2"
+                android:orientation="horizontal"
                 android:layout_marginBottom="16dp">
 
-                <!-- Product Item 1 -->
+                <!-- Shirt -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
+                    android:background="@drawable/background"
                     android:padding="8dp"
-                    android:gravity="center"
-                    android:layout_margin="8dp">
+                    android:gravity="center">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="match_parent">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/shirt"
-                            android:contentDescription="Shirt"/>
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:contentDescription="Shirt Icon"
+                            android:src="@drawable/shirt" />
 
+                        <!-- Favorite Icon -->
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
+                            android:src="@drawable/ic_favorite"
+                            android:contentDescription="Favorite"
                             android:layout_alignParentEnd="true"
-                            android:layout_margin="8dp"
-                            android:src="@drawable/ic_heart"
-                            android:contentDescription="Favorite"/>
+                            android:layout_margin="8dp"/>
                     </RelativeLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Shirt - $20"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="8dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="⭐ 4.6"
                         android:textSize="14sp"
-                        android:textColor="@android:color/holo_orange_dark"/>
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
 
-                <!-- Product Item 2 -->
+                <!-- Jeans -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
+                    android:background="@drawable/div_background"
                     android:padding="8dp"
-                    android:gravity="center"
-                    android:layout_margin="8dp">
+                    android:gravity="center">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="match_parent">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:scaleType="fitXY"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:src="@drawable/jeans"
-                            android:contentDescription="Jeans"/>
+                            android:contentDescription="Jeans Icon"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"/>
 
+                        <!-- Favorite Icon -->
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
+                            android:src="@drawable/ic_favorite"
+                            android:contentDescription="Favorite"
                             android:layout_alignParentEnd="true"
-                            android:layout_margin="8dp"
-                            android:src="@drawable/ic_heart"
-                            android:contentDescription="Favorite"/>
+                            android:layout_margin="8dp"/>
                     </RelativeLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Jeans - $35"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
-                        android:layout_marginTop="8dp"/>
+                        android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Second Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Shoes -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/div_background"
+                    android:padding="8dp"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/shoes"
+                            android:contentDescription="Shoes Icon"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"/>
+
+                        <!-- Favorite Icon -->
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_favorite"
+                            android:contentDescription="Favorite"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="8dp"/>
+                    </RelativeLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="⭐ 4.3"
+                        android:text="Shoes - $50"
                         android:textSize="14sp"
-                        android:textColor="@android:color/holo_orange_dark"/>
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
-
-            </GridLayout>
-
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
