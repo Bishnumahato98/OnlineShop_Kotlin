@@ -5,5 +5,7 @@
     <color name="red">#DB0909</color>
     <color name="green">#77E67B</color>
     <color name="purple">#C15DEF</color>
+    <color name="light_gray">#EFEFEF</color>
+
 
 </resources>

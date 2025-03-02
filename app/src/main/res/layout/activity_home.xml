@@ -2,9 +2,10 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
 
-    <!-- Scrollable Home Page Content -->
+    <!-- Scrollable Content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,62 +18,82 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Welcome Back Section -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Welcome Back"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bishnu"
-                android:textSize="18sp"
-                android:layout_marginBottom="16dp"/>
+            <!-- Space before New Collection Section -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
 
             <!-- New Collection Section -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Collection"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/man"
+                android:gravity="center"
+                android:padding="16dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Discount 50% for first transaction"
-                android:textSize="16sp"
-                android:layout_marginBottom="16dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Collection"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Shop Now"
-                android:backgroundTint="@color/purple"
-                android:textColor="@android:color/white"
-                android:layout_marginBottom="24dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discount 50% for first transaction"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="12dp"/>
 
-            <!-- Official Brand Section -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Official Brand"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shop Now"
+                    android:backgroundTint="@color/purple"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
 
-            <Button
-                android:layout_width="wrap_content"
+            <!-- Space before Welcome Section -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+            <!-- Welcome Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="See all"
-                android:backgroundTint="@color/purple"
-                android:textColor="@android:color/white"
-                android:layout_marginBottom="24dp"/>
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:background="@android:color/white">
+
+                <!-- Welcome Text -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome, Bishnu"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
+
+                <!-- Search Icon -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_search"
+                    android:contentDescription="Search"
+                    android:layout_marginEnd="16dp"/>
+
+                <!-- Notification Icon -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_notification"
+                    android:contentDescription="Notifications"/>
+            </LinearLayout>
 
             <!-- Recommendation Section -->
             <TextView
@@ -81,214 +102,109 @@
                 android:text="Recommendation"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="See all"
-                android:backgroundTint="@color/purple"
-                android:textColor="@android:color/white"
-                android:layout_marginBottom="16dp"/>
-
-            <!-- Product List (Shirt and Jeans) -->
-            <LinearLayout
+            <!-- Product Grid Layout (2 Columns Per Row) -->
+            <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:columnCount="2"
                 android:layout_marginBottom="16dp">
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/shirt"
-                    android:contentDescription="Shirt"
-                    android:layout_marginEnd="8dp"/>
-
+                <!-- Product Item 1 -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pink Singlet"
-                        android:textSize="16sp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$35.0"
-                        android:textSize="14sp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4.6"
-                        android:textSize="14sp"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:src="@drawable/jeans"
-                    android:contentDescription="Jeans"
-                    android:layout_marginEnd="8dp"/>
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:layout_margin="8dp">
 
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/shirt"
+                            android:contentDescription="Shirt"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="8dp"
+                            android:src="@drawable/ic_heart"
+                            android:contentDescription="Favorite"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shirt - $20"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⭐ 4.6"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/holo_orange_dark"/>
+                </LinearLayout>
+
+                <!-- Product Item 2 -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Jean Coat"
-                        android:textSize="16sp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$55.0"
-                        android:textSize="14sp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4.1"
-                        android:textSize="14sp"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- 4 Divisions (Shirt, Jeans, Shoes, Coat) -->
-            <!-- First Row (Shirt and Jeans) -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
-
-                <!-- Shirt Division -->
-                <LinearLayout
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_weight="1"
                     android:orientation="vertical"
-                    android:background="@drawable/div_background"
                     android:padding="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:layout_margin="8dp">
 
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_shirt"
-                        android:contentDescription="Shirt Icon"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginBottom="8dp"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/jeans"
+                            android:contentDescription="Jeans"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="8dp"
+                            android:src="@drawable/ic_heart"
+                            android:contentDescription="Favorite"/>
+                    </RelativeLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Shirt"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_horizontal"/>
-                </LinearLayout>
-
-                <!-- Jeans Division -->
-                <LinearLayout
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:orientation="vertical"
-                    android:background="@drawable/div_background"
-                    android:padding="8dp"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_jeans"
-                        android:contentDescription="Jeans Icon"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginBottom="8dp"/>
+                        android:text="Jeans - $35"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Jeans"
+                        android:text="⭐ 4.3"
                         android:textSize="14sp"
-                        android:layout_gravity="center_horizontal"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- Second Row (Shoes and Coat) -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <!-- Shoes Division -->
-                <LinearLayout
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:orientation="vertical"
-                    android:background="@drawable/div_background"
-                    android:padding="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_shoes"
-                        android:contentDescription="Shoes Icon"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginBottom="8dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Shoes"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_horizontal"/>
+                        android:textColor="@android:color/holo_orange_dark"/>
                 </LinearLayout>
 
-                <!-- Coat Division -->
-                <LinearLayout
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:orientation="vertical"
-                    android:background="@drawable/div_background"
-                    android:padding="8dp"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_coat"
-                        android:contentDescription="Coat Icon"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginBottom="8dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Coat"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_horizontal"/>
-                </LinearLayout>
-            </LinearLayout>
+            </GridLayout>
 
         </LinearLayout>
     </ScrollView>
