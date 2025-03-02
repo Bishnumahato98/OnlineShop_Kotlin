@@ -23,6 +23,7 @@ class LoginActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.etPassword)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val tvSignup = findViewById<TextView>(R.id.tvSignup)
+        val tvForgotPassword = findViewById<TextView>(R.id.tvForgotPassword)
 
         btnLogin.setOnClickListener {
             val emailText = email.text.toString().trim()
@@ -37,6 +38,12 @@ class LoginActivity : AppCompatActivity() {
 
         tvSignup.setOnClickListener {
             val intent = Intent(this, SignupActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Forgot Password Click Listener
+        tvForgotPassword.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
     }
@@ -55,4 +62,3 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 }
-

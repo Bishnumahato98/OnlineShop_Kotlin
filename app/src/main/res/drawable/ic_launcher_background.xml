@@ -167,4 +167,10 @@
         android:pathData="M79,19L79,89"
         android:strokeWidth="0.8"
         android:strokeColor="#33FFFFFF" />
+
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <solid android:color="#FFFFFF"/> <!-- Background color -->
+        <corners android:radius="8dp"/> <!-- Rounded corners -->
+        <stroke android:width="1dp" android:color="#CCCCCC"/> <!-- Border -->
+    </shape>
 </vector>
