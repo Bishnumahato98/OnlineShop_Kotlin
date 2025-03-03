@@ -320,7 +320,7 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="16dp">
 
-                <!-- Shoes -->
+                <!-- hat -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -340,8 +340,8 @@
                             android:layout_height="100dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginBottom="8dp"
-                            android:contentDescription="Shoes Icon"
-                            android:src="@drawable/shoes" />
+                            android:contentDescription="Hat Icon"
+                            android:src="@drawable/hat" />
 
                         <!-- Favorite Icon -->
                         <ImageView
@@ -370,7 +370,7 @@
                         android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
 
-                <!-- Coat -->
+                <!-- sunglass -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -388,8 +388,8 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/coat"
-                            android:contentDescription="Coat Icon"
+                            android:src="@drawable/sunglass"
+                            android:contentDescription="Sunglass Icon"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginBottom="8dp"/>
 
