@@ -313,6 +313,113 @@
                         android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
             </LinearLayout>
+            <!-- Third Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- Shoes -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@color/light_gray"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp"> <!-- Added margin for gap -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:contentDescription="Shoes Icon"
+                            android:src="@drawable/shoes" />
+
+                        <!-- Favorite Icon -->
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/favourite"
+                            android:contentDescription="Favorite"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="8dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shoes - $50"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <!-- Rating -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⭐ 4.8"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+
+                <!-- Coat -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@color/light_gray"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"> <!-- Added margin for gap -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/coat"
+                            android:contentDescription="Coat Icon"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"/>
+
+                        <!-- Favorite Icon -->
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/favourite"
+                            android:contentDescription="Favorite"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="8dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coat - $70"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <!-- Rating -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⭐ 4.6"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
